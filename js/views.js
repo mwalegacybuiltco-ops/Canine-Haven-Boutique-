@@ -69,7 +69,7 @@ function loginView(){
   return `
     <div class="loginScreen">
       <div class="loginWrap">
-        <img src="./login-screen.png" alt="Login">
+        <img src="./assets/login-screen.png" alt="Login">
         <div class="tapLayer">
           <div class="tap tapCustomer" data-login="customer" title="Customer"></div>
           <div class="tap tapAffiliate" data-login="affiliate" title="Affiliate"></div>
