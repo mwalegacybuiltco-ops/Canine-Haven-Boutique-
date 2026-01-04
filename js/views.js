@@ -18,7 +18,7 @@ function heroCard(){
       </div>
     </div>
     <div style="margin-top:12px" class="iframeWrap">
-      <img src="./assets/hero-malinois.png" alt="Belgian Malinois" style="width:100%;height:auto;display:block">
+     <img src="./hero-malinois.png" alt="Belgian Malinois" style="width:100%;height:auto;display:block">
     </div>
   </div>`;
 }
@@ -69,7 +69,7 @@ function loginView(){
   return `
     <div class="loginScreen">
       <div class="loginWrap">
-        <img src="./assets/login-screen.png" alt="Login">
+        <img src="./login-screen.png" alt="Login">
         <div class="tapLayer">
           <div class="tap tapCustomer" data-login="customer" title="Customer"></div>
           <div class="tap tapAffiliate" data-login="affiliate" title="Affiliate"></div>
