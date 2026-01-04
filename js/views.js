@@ -69,12 +69,12 @@ function loginView(){
   return `
     <div class="loginScreen">
       <div class="loginWrap">
-        <img src="./assets/login-screen.png" alt="Login">
-        <div class="tapLayer">
-          <div class="tap tapCustomer" data-login="customer" title="Customer"></div>
-          <div class="tap tapAffiliate" data-login="affiliate" title="Affiliate"></div>
-          <div class="tap tapShop" data-login="shop" title="Shop"></div>
-        </div>
+        <img class="loginImg" src="./assets/login-screen.png" alt="Login">
+
+        <!-- HOTSPOTS -->
+        <button class="hotspot hsCustomer" data-login="customer" aria-label="I'm a Customer"></button>
+        <button class="hotspot hsAffiliate" data-login="affiliate" aria-label="I'm an Affiliate"></button>
+        <button class="hotspot hsProducts" data-login="shop" aria-label="View Products"></button>
       </div>
     </div>
   `;
