@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Canine Haven Boutique</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#805AFF" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar" id="topbar">
+      <button id="menuBtn" class="ghost iconbtn" aria-label="Menu">☰</button>
+      <div class="brand">
+        <div class="logo">🐾</div>
+        <div>
+          <div class="brandname">Canine Haven Boutique</div>
+          <div class="tagline">Gold • Black • Purple • Powered by LegacyBuilt Tech</div>
+        </div>
+      </div>
+      <button id="installBtn" class="ghost hidden">Install</button>
+    </header>
+
+    <aside id="sidebar" class="sidebar">
+      <div class="sidehead">
+        <div class="sidebrand">🐾 Canine Haven</div>
+        <button id="closeMenuBtn" class="ghost iconbtn">✕</button>
+      </div>
+
+      <div class="sidelabel">Shop Tabs</div>
+      <a class="sidelink" href="#/shop?cat=Custom%20Apparel">👕 Custom apparel</a>
+      <a class="sidelink" href="#/shop?cat=Collars%20and%20Tags">🏷️ Collars and tags</a>
+      <a class="sidelink" href="#/shop?cat=Toys">🧸 Toys</a>
+      <a class="sidelink" href="#/shop?cat=Leashes%20and%20Harnesses">🦮 Leashes and harnesses</a>
+      <a class="sidelink" href="#/shop?cat=Blankets%20and%20Beds">🛏️ Blankets and beds</a>
+      <a class="sidelink" href="#/shop?cat=Outerwear%20and%20Shoes">🥾 Outer wear and shoes</a>
+      <a class="sidelink" href="#/shop">✨ All products</a>
+
+      <div class="sidelabel">Join</div>
+      <a class="sidelink" href="#/join">📝 Customer / Affiliate</a>
+      <a class="sidelink" href="#/starterpack">💳 Starter Pack $140</a>
+
+      <div class="sidelabel">Affiliate Back Office</div>
+      <a class="sidelink" href="#/affiliate">🔗 My Link</a>
+      <a class="sidelink" href="#/start-here">✅ Start Here</a>
+      <a class="sidelink" href="#/training">🎓 Training</a>
+      <a class="sidelink" href="#/four-corners">🧭 Four Corners</a>
+      <a class="sidelink" href="#/team">🐺 Team Builder</a>
+      <a class="sidelink" href="#/payouts">💰 Payouts</a>
+      <a class="sidelink" href="#/stats">📊 Stats</a>
+
+      <div class="sidelabel">Community</div>
+      <a class="sidelink" href="#/community">👥 Facebook Group</a>
+
+      <div class="small" style="margin-top:12px">
+        <div class="notice">
+          Tip: Host on HTTPS (Netlify/GitHub Pages). If you open from file://, some buttons can fail.
+        </div>
+      </div>
+    </aside>
+
+    <div id="backdrop" class="backdrop hidden"></div>
+    <main id="view" class="main"></main>
+
+    <div class="footer" id="footer">
+      <b>Powered by LegacyBuilt Tech</b> • All rights reserved
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
