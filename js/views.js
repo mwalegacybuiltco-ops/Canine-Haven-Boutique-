@@ -69,17 +69,14 @@ function loginView(){
   return `
     <div class="loginScreen">
       <div class="loginWrap">
-        <img class="loginImg" src="./assets/login-screen.png" alt="Login">
-
-        <!-- HOTSPOTS -->
-        <button class="hotspot hsCustomer" data-login="customer" aria-label="I'm a Customer"></button>
-        <button class="hotspot hsAffiliate" data-login="affiliate" aria-label="I'm an Affiliate"></button>
-        <button class="hotspot hsProducts" data-login="shop" aria-label="View Products"></button>
+        <img src="assets/login-screen.png" alt="Login" class="loginImg">
+<button class="hotspot hsCustomer" data-login="customer"></button>
+<button class="hotspot hsAffiliate" data-login="affiliate"></button>
+<button class="hotspot hsProducts" data-login="shop"></button>
       </div>
     </div>
   `;
 }
-
 function iframeEmbed(url){
   if (!url || !url.startsWith("http")){
     return `<div class="notice">Paste your Google Form embed <b>src</b> into <b>js/config.js</b> to show the form here.</div>`;
