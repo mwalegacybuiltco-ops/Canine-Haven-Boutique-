@@ -114,18 +114,15 @@ hr{border:none; border-top:1px solid var(--border); margin:14px 0}
   align-items:center;
   background:#000;
 }
-
 .loginWrap{
   position: relative;
   width: min(420px, 100%);
 }
-
 .loginImg{
   width:100%;
   height:auto;
   display:block;
 }
-
 /* invisible clickable areas */
 .hotspot{
   position:absolute;
@@ -133,7 +130,6 @@ hr{border:none; border-top:1px solid var(--border); margin:14px 0}
   background: rgba(255,255,255,0); /* invisible */
   cursor:pointer;
 }
-
 /* clickable zones */
 .hsCustomer{
   left: 10%;
@@ -141,21 +137,18 @@ hr{border:none; border-top:1px solid var(--border); margin:14px 0}
   width: 38%;
   height: 8%;
 }
-
 .hsAffiliate{
   left: 52%;
   top: 67%;
   width: 38%;
   height: 8%;
 }
-
 .hsProducts{
   left: 22%;
   top: 77%;
   width: 56%;
   height: 8%;
 }
-
 .footer{margin-top:14px; text-align:center; color:rgba(255,255,255,.55); font-size:12px;}
 .footer b{color:var(--gold)}
 .iframeWrap{border:1px solid var(--border); border-radius:18px; overflow:hidden; background:#0f0f14; box-shadow:var(--shadow);}
