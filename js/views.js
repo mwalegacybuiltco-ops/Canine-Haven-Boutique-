@@ -18,7 +18,7 @@ function heroCard(){
       </div>
     </div>
     <div style="margin-top:12px" class="iframeWrap">
-     <img src="./hero-malinois.png" alt="Belgian Malinois" style="width:100%;height:auto;display:block">
+     <img src="./assets/hero-malinois.png" alt="Belgian Malinois" style="width:100%;height:auto;display:block">
     </div>
   </div>`;
 }
