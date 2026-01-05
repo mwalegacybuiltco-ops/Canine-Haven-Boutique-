@@ -39,23 +39,21 @@ if ("serviceWorker" in navigator){
 }
 function route(){
   saveRefFromUrl();
+
   const { path, params } = parseHash();
   view.innerHTML = render(path, params);
   afterRender(path);
 
-  // ✅ FORCE LOGIN / ROLE VISIBILITY
+  // show/hide affiliate-only menu
   const role = localStorage.getItem("role") || "customer";
   const affiliateMenu = document.getElementById("affiliateMenu");
-
-  if (affiliateMenu) {
-    affiliateMenu.style.display = role === "affiliate" ? "" : "none";
-  }
+  if (affiliateMenu) affiliateMenu.style.display = role === "affiliate" ? "" : "none";
 }
 
-/** ✅ FORCE LOGIN FIRST **/
 if (!location.hash || location.hash === "#/" || location.hash === "#") {
   location.hash = "#/login";
 }
 
 window.addEventListener("hashchange", route);
 route();
+
