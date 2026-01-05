@@ -41,13 +41,6 @@ if ("serviceWorker" in navigator){
     navigator.serviceWorker.register("./sw.js").catch(()=>{});
   });
 }
-
-function route(){
-  saveRefFromUrl();
-  const { path, params } = parseHash();
-  view.innerHTML = render(path, params);
-  afterRender(path);
-}
 function route(){
   saveRefFromUrl();
   const { path, params } = parseHash();
