@@ -3,16 +3,18 @@ const ASSETS = [
   "./",
   "./index.html",
   "./styles.css",
-  "./manifest.webmanifest",
-  "./assets/icon-192.png",
-  "./assets/icon-512.png",
-  "./assets/login-screen.png",
-  "./assets/hero-malinois.png",
+
   "./js/app.js",
   "./js/views.js",
-  "./js/utils.js",
   "./js/config.js",
-  "./js/products.js"
+  "./js/products.js",
+  "./js/utils.js",
+
+  "./manifest.webmanifest",
+  "./assets/login-screen.png",
+  "./assets/hero-malinois.png",
+  "./icon-192.png",
+  "./icon-512.png"
 ];
 
 self.addEventListener("install", (e)=>{
