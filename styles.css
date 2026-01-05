@@ -161,3 +161,24 @@ hr{border:none; border-top:1px solid var(--border); margin:14px 0}
   #menuBtn{display:none}
   #closeMenuBtn{display:none}
 }
+/* FORCE login screen to sit above everything */
+.loginScreen{
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #000;
+}
+
+/* ensure image is the stacking base */
+.loginWrap{
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+}
+
+/* hotspots MUST sit above image */
+.tapLayer{
+  position:absolute;
+  inset:0;
+  z-index:10;
+}
