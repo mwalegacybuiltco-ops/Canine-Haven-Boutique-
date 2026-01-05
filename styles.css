@@ -114,9 +114,9 @@ hr{border:none; border-top:1px solid var(--border); margin:14px 0}
   align-items:center;
   background:#000;
 }
-.loginWrap{
-  position: relative;
-  width: min(420px, 100%);
+.loginImg{
+  position:relative;
+  z-index: 1;
 }
 .loginImg{
   width:100%;
@@ -126,9 +126,10 @@ hr{border:none; border-top:1px solid var(--border); margin:14px 0}
 /* invisible clickable areas */
 .hotspot{
   position:absolute;
-  border:0;
-  background: rgba(255,255,255,0); /* invisible */
+  border:2px solid red;              /* DEBUG: show boxes */
+  background: rgba(255,0,0,0.18);    /* DEBUG: show fill */
   cursor:pointer;
+  z-index: 5;                        /* IMPORTANT */
 }
 /* clickable zones */
 .hsCustomer{
