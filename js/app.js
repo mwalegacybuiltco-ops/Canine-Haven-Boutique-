@@ -7,10 +7,6 @@ const backdrop = document.getElementById("backdrop");
 const menuBtn = document.getElementById("menuBtn");
 const closeMenuBtn = document.getElementById("closeMenuBtn");
 
-function closeSidebar(){
-  sidebar?.classList.remove("open");
-  backdrop?.classList.add("hidden");
-}
 function openSidebar(){
   sidebar?.classList.add("open");
   backdrop?.classList.remove("hidden");
