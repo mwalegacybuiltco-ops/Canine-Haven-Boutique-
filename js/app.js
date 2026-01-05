@@ -1,5 +1,5 @@
+import { parseHash } from "./utils.js";
 import { render, afterRender } from "./views.js";
-import { parseHash, saveRefFromUrl } from "./utils.js";
 
 const view = document.getElementById("view");
 const sidebar = document.getElementById("sidebar");
