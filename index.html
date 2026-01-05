@@ -4,17 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Canine Haven Boutique</title>
-
-  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="manifest" href="manifest.webmanifest">
   <meta name="theme-color" content="#805AFF" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
-
 <body>
   <div id="app">
     <header class="topbar" id="topbar">
-      <button id="menuBtn" class="ghost iconbtn" type="button" aria-label="Menu">☰</button>
-
+      <button id="menuBtn" class="ghost iconbtn" aria-label="Menu">☰</button>
       <div class="brand">
         <div class="logo">🐾</div>
         <div>
@@ -22,14 +19,13 @@
           <div class="tagline">Gold • Black • Purple • Powered by LegacyBuilt Tech</div>
         </div>
       </div>
-
-      <button id="installBtn" class="ghost hidden" type="button">Install</button>
+      <button id="installBtn" class="ghost hidden">Install</button>
     </header>
 
-    <aside id="sidebar" class="sidebar">
+    <aside id="sidebar" class="sidebar" aria-label="Sidebar navigation">
       <div class="sidehead">
         <div class="sidebrand">🐾 Canine Haven</div>
-        <button id="closeMenuBtn" class="ghost iconbtn" type="button" aria-label="Close">✕</button>
+        <button id="closeMenuBtn" class="ghost iconbtn" aria-label="Close menu">✕</button>
       </div>
 
       <div class="sidelabel">Shop Tabs</div>
@@ -43,11 +39,10 @@
 
       <div class="sidelabel">Join</div>
       <a class="sidelink" href="#/join">📝 Customer / Affiliate</a>
-      <a class="sidelink" href="#/starterpack">💳 Starter Pack $140</a>
+      <a class="sidelink" href="#/starterpack" id="starterPackLink">💳 Starter Pack $140</a>
 
       <div id="affiliateMenu">
         <div class="sidelabel">Affiliate Back Office</div>
-        <a class="sidelink" href="#/starterpack">🎁 Starter Pack</a>
         <a class="sidelink" href="#/affiliate">🔗 My Link</a>
         <a class="sidelink" href="#/start-here">✅ Start Here</a>
         <a class="sidelink" href="#/training">🎓 Training</a>
@@ -62,7 +57,7 @@
 
       <div class="small" style="margin-top:12px">
         <div class="notice">
-          Tip: Host on HTTPS (Netlify/GitHub Pages). If you open from file://, some buttons can fail.
+          Tip: Host on HTTPS (GitHub Pages/Netlify). If you open from <b>file://</b>, modules and some buttons can fail.
         </div>
       </div>
     </aside>
@@ -75,7 +70,6 @@
     </div>
   </div>
 
-  <!-- ✅ app.js should be loaded ONCE, here -->
-  <script type="module" src="js/app.js"></script>
+  <script type="module" src="./js/app.js"></script>
 </body>
 </html>
