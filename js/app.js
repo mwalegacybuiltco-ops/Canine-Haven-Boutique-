@@ -48,6 +48,20 @@ function route(){
   view.innerHTML = render(path, params);
   afterRender(path);
 }
+function route(){
+  saveRefFromUrl();
+  const { path, params } = parseHash();
+  view.innerHTML = render(path, params);
+  afterRender(path);
+
+  // ✅ FORCE LOGIN / ROLE VISIBILITY
+  const role = localStorage.getItem("role") || "customer";
+  const affiliateMenu = document.getElementById("affiliateMenu");
+
+  if (affiliateMenu) {
+    affiliateMenu.style.display = role === "affiliate" ? "" : "none";
+  }
+}
 
 /** ✅ FORCE LOGIN FIRST **/
 if (!location.hash || location.hash === "#/" || location.hash === "#") {
