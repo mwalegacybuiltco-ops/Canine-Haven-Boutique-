@@ -70,9 +70,10 @@ function loginView(){
     <div class="loginScreen">
       <div class="loginWrap">
         <img src="assets/login-screen.png" alt="Login" class="loginImg">
-<button class="hotspot hsCustomer" data-login="customer"></button>
-<button class="hotspot hsAffiliate" data-login="affiliate"></button>
-<button class="hotspot hsProducts" data-login="shop"></button>
+
+        <button class="hotspot hsCustomer" data-login="customer" aria-label="Customer"></button>
+        <button class="hotspot hsAffiliate" data-login="affiliate" aria-label="Affiliate"></button>
+        <button class="hotspot hsProducts" data-login="shop" aria-label="Products"></button>
       </div>
     </div>
   `;
