@@ -1,4 +1,4 @@
-import { parseHash } from "./utils.js";
+import { parseHash, saveRefFromUrl } from "./utils.js";
 import { render, afterRender } from "./views.js";
 
 const view = document.getElementById("view");
@@ -47,6 +47,11 @@ function route(){
   const { path, params } = parseHash();
   view.innerHTML = render(path, params);
   afterRender(path);
+}
+
+/** ✅ FORCE LOGIN FIRST **/
+if (!location.hash || location.hash === "#/" || location.hash === "#") {
+  location.hash = "#/login";
 }
 
 window.addEventListener("hashchange", route);
