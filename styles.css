@@ -116,42 +116,63 @@ hr{border:none; border-top:1px solid var(--border); margin:14px 0}
   align-items:center;
   background:#000;
 }
+/* ===== LOGIN SCREEN ===== */
+.loginScreen{
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginWrap{
+  position: relative;
+  width: min(420px, 100%);
+}
+
 .loginImg{
-  position:relative;
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
   z-index: 1;
 }
-.loginImg{
-  width:100%;
-  height:auto;
-  display:block;
-}
-/* invisible clickable areas */
+
+/* invisible clickable buttons */
 .hotspot{
-  position:absolute;
-  border:2px solid red;              /* DEBUG: show boxes */
-  background: rgba(255,0,0,0.18);    /* DEBUG: show fill */
-  cursor:pointer;
-  z-index: 5;                        /* IMPORTANT */
+  position: absolute;
+  z-index: 5;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
-/* clickable zones */
+
+/* clickable zones — adjust if needed */
 .hsCustomer{
   left: 10%;
   top: 67%;
   width: 38%;
   height: 8%;
 }
+
 .hsAffiliate{
   left: 52%;
   top: 67%;
   width: 38%;
   height: 8%;
 }
+
 .hsProducts{
   left: 22%;
   top: 77%;
   width: 56%;
   height: 8%;
 }
+
 .footer{margin-top:14px; text-align:center; color:rgba(255,255,255,.55); font-size:12px;}
 .footer b{color:var(--gold)}
 .iframeWrap{border:1px solid var(--border); border-radius:18px; overflow:hidden; background:#0f0f14; box-shadow:var(--shadow);}
