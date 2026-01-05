@@ -307,13 +307,18 @@ export function afterRender(path){
   }
 
   document.querySelectorAll("[data-login]").forEach(el=>{
-    el.addEventListener("click", ()=>{
-      const mode = el.getAttribute("data-login");
-      if (mode === "shop") location.hash = "#/shop";
-      if (mode === "customer") location.hash = "#/join";
-      if (mode === "affiliate") location.hash = "#/join";
-    });
+  el.addEventListener("click", ()=>{
+    const mode = el.getAttribute("data-login");
+
+    if (mode === "customer") localStorage.setItem("role", "customer");
+    if (mode === "affiliate") localStorage.setItem("role", "affiliate");
+
+    if (mode === "shop") location.hash = "#/shop";
+    if (mode === "customer") location.hash = "#/join";
+    if (mode === "affiliate") location.hash = "#/join";
   });
+});
+
 
   document.querySelectorAll("[data-join]").forEach(btn=>{
     btn.addEventListener("click", ()=>{
