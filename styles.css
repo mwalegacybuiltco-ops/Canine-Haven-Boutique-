@@ -1,6 +1,4 @@
 :root{
-  --bg:#0f0f14;
-  --card:#14141b;
   --ink:#f4f2ff;
   --muted:#b8b3d6;
   --border:rgba(255,255,255,.10);
@@ -19,14 +17,12 @@ body{
              linear-gradient(180deg,#0b0b10,#0f0f14 30%,#0f0f14);
   color:var(--ink);
 }
-
-}
 a{color:inherit}
 .hidden{display:none!important}
 .topbar{
   position:sticky; top:0; z-index:7;
   display:flex; align-items:center; justify-content:space-between; gap:10px;
-  padding:12px 12px;
+  padding:12px;
   background:rgba(15,15,20,.82);
   backdrop-filter:blur(12px);
   border-bottom:1px solid var(--border);
@@ -40,7 +36,7 @@ a{color:inherit}
   box-shadow:var(--shadow);
   font-size:20px;
 }
-.brandname{font-weight:1000; letter-spacing:.2px}
+.brandname{font-weight:1000}
 .tagline{color:var(--muted); font-size:12px; margin-top:2px}
 .iconbtn{width:44px; height:44px; display:grid; place-items:center}
 .btn,.ghost{
@@ -50,7 +46,6 @@ a{color:inherit}
 .btn{background:linear-gradient(135deg,var(--primary),#4b2cff); color:#fff;}
 .btnGold{background:linear-gradient(135deg,var(--gold),#a67c00); color:#111116;}
 .ghost{background:transparent; color:var(--ink); border:1px solid var(--border);}
-.btn:disabled,.ghost:disabled{opacity:.55; cursor:not-allowed}
 .main{padding:14px; max-width:1050px; margin:0 auto}
 .card{
   background:rgba(20,20,27,.92);
@@ -65,6 +60,12 @@ a{color:inherit}
 .h1{font-size:22px; font-weight:1000; margin:6px 0 10px}
 .h2{font-size:16px; font-weight:1000; margin:0}
 .p{color:var(--muted); margin:6px 0 0; font-size:13px; line-height:1.5}
+label{display:block;margin-top:10px;color:var(--muted);font-weight:800;font-size:12px}
+.input{
+  width:100%; padding:12px; margin-top:6px;
+  border-radius:16px; border:1px solid var(--border);
+  background:#0f0f14; color:var(--ink);
+}
 .badge{
   display:inline-flex; align-items:center; gap:8px;
   padding:6px 10px; border-radius:999px;
@@ -96,7 +97,7 @@ hr{border:none; border-top:1px solid var(--border); margin:14px 0}
 .sidebar.open{transform:translateX(0)}
 .backdrop{position:fixed; inset:0; background:rgba(0,0,0,.40); z-index:9}
 .sidehead{display:flex; align-items:center; justify-content:space-between; margin-bottom:8px}
-.sidebrand{font-weight:1000; letter-spacing:.2px}
+.sidebrand{font-weight:1000}
 .sidelabel{
   font-size:11px; color:var(--muted); font-weight:1000;
   text-transform:uppercase; letter-spacing:.08em; margin:10px 6px
@@ -104,75 +105,18 @@ hr{border:none; border-top:1px solid var(--border); margin:14px 0}
 .sidelink{
   display:flex; gap:10px; align-items:center;
   text-decoration:none; color:var(--ink); font-weight:900;
-  padding:10px 10px; border-radius:16px;
+  padding:10px; border-radius:16px;
 }
 .sidelink:hover{background:rgba(128,90,255,.14)}
 .notice{padding:10px 12px; border:1px dashed rgba(212,175,55,.35); border-radius:16px; background:rgba(20,20,27,.85); color:var(--muted)}
 .small{font-size:12px}
-.loginScreen{
-  min-height: 100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background:#000;
-}
-/* ===== LOGIN SCREEN ===== */
-.loginScreen{
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loginWrap{
-  position: relative;
-  width: min(420px, 100%);
-}
-
-.loginImg{
-  width: 100%;
-  height: auto;
-  display: block;
-  position: relative;
-  z-index: 1;
-}
-
-/* invisible clickable buttons */
-.hotspot{
-  position: absolute;
-  z-index: 5;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  touch-action: manipulation;
-}
-
-/* clickable zones — adjust if needed */
-.hsCustomer{
-  left: 10%;
-  top: 67%;
-  width: 38%;
-  height: 8%;
-}
-
-.hsAffiliate{
-  left: 52%;
-  top: 67%;
-  width: 38%;
-  height: 8%;
-}
-
-.hsProducts{
-  left: 22%;
-  top: 77%;
-  width: 56%;
-  height: 8%;
-}
-
+.loginScreen{position:fixed; inset:0; z-index:9999; background:#000; display:grid; place-items:center;}
+.loginWrap{position:relative; width:min(980px,100vw); height:min(980px,100vh); display:grid; place-items:center;}
+.loginWrap img{width:100%; height:100%; object-fit:contain; display:block;}
+.hotspot{position:absolute; border:none; background:transparent; cursor:pointer; border-radius:18px;}
+.hsCustomer{left:14%; top:61%; width:72%; height:9%}
+.hsAffiliate{left:14%; top:72%; width:72%; height:9%}
+.hsProducts{left:14%; top:83%; width:72%; height:9%}
 .footer{margin-top:14px; text-align:center; color:rgba(255,255,255,.55); font-size:12px;}
 .footer b{color:var(--gold)}
 .iframeWrap{border:1px solid var(--border); border-radius:18px; overflow:hidden; background:#0f0f14; box-shadow:var(--shadow);}
@@ -183,32 +127,4 @@ hr{border:none; border-top:1px solid var(--border); margin:14px 0}
   .main{margin-left:350px}
   #menuBtn{display:none}
   #closeMenuBtn{display:none}
-}
-/* FORCE login screen to sit above everything */
-.loginScreen{
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: #000;
-}
-
-/* ensure image is the stacking base */
-.loginWrap{
-  position: relative;
-  width: 100%;
-  max-width: 420px;
-}
-
-/* hotspots MUST sit above image */
-.tapLayer{
-  position:absolute;
-  inset:0;
-  z-index:10;
-}
-/* HIDE LOGIN HOTSPOT OUTLINES BUT KEEP THEM CLICKABLE */
-.tap,
-.hotspot{
-  outline: none !important;
-  border: none !important;
-  background: transparent !important;
 }
